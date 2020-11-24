@@ -1,0 +1,41 @@
+/**
+ * Typography style for kmom06 design principles.
+ */
+
+ /**
+  * Variables
+  */
+
+@fontFamilyHeadingsAlternative: 'Playfair Display SC', Georgia, serif;
+
+
+ // Text inside flash image on start page
+.flash-text {
+    font-family: @fontFamilyHeadingsAlternative;
+    color: #ddd;
+    border-bottom: none;
+}
+
+// When a style has been selected, a flash message shows.
+.region-flash-message {
+    background-color: @accentColor;
+    color: @standardTextColor;
+    padding: 1em;
+}
+
+.stylechooser {
+    margin-bottom: @magicNumber;
+    
+    & select {
+        width: 100%;
+    }
+
+	& table tr th {
+		text-align: left;
+	}
+}
+
+// Footer
+.outer-wrap-footer .row {
+    margin-bottom: 0 !important;
+}

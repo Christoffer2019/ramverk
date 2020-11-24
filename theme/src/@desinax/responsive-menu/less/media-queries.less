@@ -1,0 +1,55 @@
+/**
+ * Media queries for responsive menu
+ */
+
+ @desktopNavbarFontSize: 0.8em;
+ @desktopNavbarPaddingTB: 0.8em;
+ @desktopNavbarPaddingLR: 0.7em;
+
+ @desktopNavbarFontSizeLarge: 1em;
+ @desktopNavbarPaddingTBLarge: 1em;
+ @desktopNavbarPaddingLRLarge: 1em;
+
+ @window-width-1: 700px;
+ @window-width-3: 1450px;
+ @window-width-4: 900px;
+
+ // Menu item width is based on the number of menu items
+ @menuItemWidth: 20%;
+
+ @media screen and (min-width: @window-width-3) {
+    .rm-desktop li a {
+        // The link of the menu item
+        padding: @desktopNavbarPaddingTBLarge @desktopNavbarPaddingLRLarge;
+        font-size: @desktopNavbarFontSizeLarge;
+    }
+}
+
+ @media screen and (max-width: @window-width-1 - 1px) {
+     .rm-small {
+         display: block;
+     }
+     
+     .rm-desktop {
+         display: none;
+     }
+ }
+
+ @media screen and (min-width: @window-width-1) {
+     .rm-small {
+         display: none;
+     }
+
+     .rm-default ul li,
+    .rm-desktop li {
+        width: @menuItemWidth;
+    }
+ }
+
+ @media screen and (min-width: @window-width-1) and (max-width: @window-width-3 - 1px) {
+    .rm-desktop li a {
+        // The link of the menu item
+        padding: @desktopNavbarPaddingTB @desktopNavbarPaddingLR;
+        font-size: @desktopNavbarFontSize;
+    }
+}

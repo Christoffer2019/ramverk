@@ -1,0 +1,188 @@
+/*!
+ * Christoffer's minimalistic theme.
+ *
+ * Minimalistic theme with the color palette black, white, gray, blue and green.
+ */
+
+
+/**
+ * Normalize and reset the style.
+ */
+
+@import "normalize.css/normalize.less";
+
+
+/**
+ * Font Awesome.
+ */
+
+ @import "@fortawesome/fontawesome-free/less/fontawesome.less";
+ @import "@fortawesome/fontawesome-free/less/solid.less";
+ @import "@fortawesome/fontawesome-free/less/brands.less";
+
+
+/*
+ * Import Google Fonts (Crimson Pro, Open Sans)
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Crimson+Pro:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/**
+ * Figure and figcaption for images and other media using figure/figcaption
+ */
+
+ @import "@desinax/figure/less/asciinema.less";
+ @import "@desinax/figure/less/codepen.less";
+ @import "@desinax/figure/less/figure.less";
+
+
+/**
+ * Import the typographic grid.
+ */
+
+ @import "@desinax/typographic-grid/less/typography-font-families.less";
+ @import "@desinax/typographic-grid/less/typography-defaults.less";
+ @import "@desinax/typographic-grid/less/typography-minimalistic.less";
+
+// Show the typographic grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+
+/**
+  * Base style to affect HTML elements on a general scale.
+  */
+
+  @import "base/base-minimalistic.less";
+
+
+ /**
+ * Import the vertical grid.
+ */
+
+@import "@desinax/vertical-grid/less/grid.less";
+@import "layout/vgrid-minimalistic.less";
+
+// Default grid, change to fit your requirements.
+//@columnWidth:   30;
+//@gutterWidth:   10;
+//@columns:       24;
+//@gridType:      "float"; // "flex"
+
+
+ /**
+  * Layout style for general structure of header, navbar, main, footer
+  * and other regions of the page including route specific styles.
+  */
+
+ @import "layout/responsive-minimalistic.less";
+ 
+
+/**
+ * Responsive menu.
+ */
+
+ @import "@desinax/responsive-menu/less/responsive-menu.less";
+ @import "@desinax/responsive-menu/less/media-queries.less"; 
+
+
+ /**
+  * My own style
+  */
+
+
+ /**
+  * Navbar colors
+  */
+
+// responsive-kmom03
+@desktopSubmenuHoverBgColor: rgba(35, 55, 75, 0.7);
+@desktopSubmenuHoverColor: @navbarItemHoverColor;
+
+// vgrid
+@linkToTopHoverBgColor:  @navbarItemHoverBgColor;
+@linkToTopHoverColor: @navbarItemHoverBgColor;
+@window-width-2: 1050px;
+
+// responsive-menu
+@navbarAccentColor: @navbarItemHoverBgColor;
+@navbarItemHoverColor: rgb(255, 255, 255);
+@navbarItemHoverBgColor:    rgb(35, 55, 75);
+@navbarMenuButtonHoverColor: rgb(255, 255, 255);
+@maxButtonSubmenuHoverBgColor: @navbarItemHoverBgColor;
+
+@accentColor: rgb(35, 55, 75);
+@standardTextColor: rgb(190, 190 ,190);
+
+// media-queries
+@desktopNavbarFontSize: 0.7em;
+@desktopNavbarPaddingTB: 1em;
+@desktopNavbarPaddingLR: 0.5em;
+
+@desktopNavbarFontSizeLarge: 0.9em;
+@desktopNavbarPaddingTBLarge: 0.9em;
+@desktopNavbarPaddingLRLarge: 0.5em;
+
+/**
+ * Window width
+ */
+
+ @window-width-1: 750px;
+ @window-width-2: 1070px;
+ @window-width-3: 1400px;
+ @window-width-4: 900px;
+
+/**
+ * Base
+ */
+ @htmlBgImg: linear-gradient( rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.57) ), url(../img/minimalistic/texture-body.jpg);
+
+/**
+ * Header
+ */
+ @logoFontSizeL: @desktopNavbarFontSizeLarge;
+ @logoFontSizeS: 0.7em;
+ @logoPaddingTB: 1em;
+ @headerHeight: 3em;
+
+ @logoFontSizeL: 1em;
+
+/*
+ * font family and headers
+ */
+@fontFamilyBody: 'Open Sans', Verdana, Tahoma, 'sans-serif';
+@fontFamilyHeadings: 'Crimson Pro', Georgia, serif;
+@fontFamilyHeadingsAlternative: 'Playfair Display SC', Georgia, serif;
+
+@colorH1: rgb(12, 57, 24);
+@colorH2: rgb(42, 64, 105);
+
+/*
+ * Magic number and base fontsize
+ */
+@magicNumber:  24px;  // 22px
+@fontSizeBody: 17px;
+
+
+/*
+ * Figure, asciinema, codepen
+ */
+
+figure.figure {
+    @maxContentWidth: @window-width-2;
+    #desinax-figure.figure(@maxContentWidth);
+}
+
+figure.asciinema {
+    &:extend(figure.figure);
+    #desinax-figure.asciinema();
+}
+
+figure.codepen,
+figure.figure-codepen {
+    &:extend(figure.figure);
+    #desinax-figure.codepen();
+}

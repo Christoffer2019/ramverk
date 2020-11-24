@@ -1,0 +1,31 @@
+/**
+ * Base style for kmom03.
+ */
+
+ @htmlColor: black;
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 100%;
+    color: @htmlColor;
+    background: 
+        linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../img/minimalistic/background-wood.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+// Activate the grid base font
+body {
+    #desinax-hgrid.font(@fontSizeBody);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// Activate grid and affect all typographic elements
+#desinax-hgrid.activateDefaultTypography();
