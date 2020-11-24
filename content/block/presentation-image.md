@@ -1,0 +1,1 @@
+<img src="img/minimalistic/presentation.JPG" id="me-presentation" class="me-presentation" alt="Image of Christoffer">  
