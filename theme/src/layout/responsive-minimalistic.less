@@ -157,6 +157,14 @@
     }
 
     /**
+     * Forms
+     */
+
+    #ip-address {
+        width: 16em !important;
+    }
+
+    /**
      * Footer
      */
 
@@ -262,12 +270,24 @@
     }
 
     /**
+     * Forms
+     */
+
+    .form,
+    .button {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        width: calc(100% - 1em);    // has margin: 0.5em
+    }
+
+    /**
      * Style Chooser table
      */
 
     .stylechooser tbody {
-        
-        
         & tr {
         display: flex;
         flex-direction: column;

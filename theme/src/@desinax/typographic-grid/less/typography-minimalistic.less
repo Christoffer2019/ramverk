@@ -6,8 +6,63 @@
   * Variables
   */
 
+@buttonBgColor: rgb(43, 43, 43);
+@buttonColor: rgb(195, 195, 195);
+
+@buttonHoverBgColor: rgb(35, 55, 75);
+@buttonHoverColor: white;
+
+@buttonPadding: 1em;
+@buttonBorder: none;
+
+@inputPadding: 1em 0.4em;
+@inputBorder: 1px solid rgb(43, 43, 43);
+
+@inputHoverBorder: 1px solid rgb(35, 55, 75);
+@inputHoverColor: rgb(35, 55, 75);
+
 @fontFamilyHeadingsAlternative: 'Playfair Display SC', Georgia, serif;
 
+/**
+ * Forms
+ */
+
+.button {
+    display: inline-block; // for a-tag
+}
+
+button,
+.button {
+    background-color: @buttonBgColor;
+    color: @buttonColor !important;
+    padding: @buttonPadding;
+    border: @buttonBorder;
+    font-weight: bold;
+
+    &:hover,
+    &:active {
+        background-color: @buttonHoverBgColor;
+        color: @buttonHoverColor;
+    }
+}
+
+input {
+    padding: @inputPadding;
+    border: @inputBorder;
+
+    &:hover,
+    &:active {
+        border: @inputHoverBorder;
+        color: @inputHoverColor;
+    }
+}
+
+button,
+.button,
+input,
+label {
+    margin: 0.5em;
+}
 
  // Text inside flash image on start page
 .flash-text {
@@ -23,6 +78,7 @@
     padding: 1em;
 }
 
+// Style chooser
 .stylechooser {
     margin-bottom: @magicNumber;
     
