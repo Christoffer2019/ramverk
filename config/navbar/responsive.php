@@ -204,6 +204,30 @@ return [
             ],
         ],
         [
+            "text" => "<i class='fas fa-check-circle'></i> Validera IP",
+            "url" => "validera-ip-adress",
+            "title" => "Validera IP-adress",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Introduktion",
+                        "url" => "validera-ip-adress/index",
+                        "title" => "",
+                    ],
+                    [
+                        "text" => "Via PHP",
+                        "url" => "validera-ip-adress/php",
+                        "title" => "",
+                    ],
+                    [
+                        "text" => "Via REST API",
+                        "url" => "validera-ip-adress/rest-api",
+                        "title" => "",
+                    ],
+                ],
+            ],
+        ],
+        [
             "text" => "<i class='fas fa-paint-brush'></i> Styleväljare",
             "url" => "style",
             "title" => "Välj style på webbplatsen.",

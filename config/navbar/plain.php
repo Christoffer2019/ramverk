@@ -29,6 +29,11 @@ return [
             "title" => "Verktyg och möjligheter för utveckling.",
         ],
         [
+            "text" => "<i class='fas fa-check-circle'></i> Validera IP",
+            "url" => "validera-ip-adress",
+            "title" => "Validera IP-adress",
+        ],
+        [
             "text" => "<i class='fas fa-paint-brush'></i> Styleväljare",
             "url" => "style",
             "title" => "Välj style på webbplatsen.",
