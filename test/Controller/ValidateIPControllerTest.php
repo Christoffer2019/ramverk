@@ -1,15 +1,16 @@
 <?php
 
-namespace Anax\Controller;
+namespace chly19\Controller;
 
 use Anax\DI\DIFactoryConfig;
 use PHPUnit\Framework\TestCase;
+use chly19\Model\ValidateIPStylishPresentationModel;
 
 /**
- * Tests for class ValidateIPAddressController.
+ * Tests for class ValidateIPController.
  */
 
-class ValidateIPAddressControllerTest extends TestCase
+class ValidateIPControllerTest extends TestCase
 {
     protected $di;
 
@@ -26,7 +27,7 @@ class ValidateIPAddressControllerTest extends TestCase
         $di->get("cache")->setPath(ANAX_INSTALL_PATH . "/test/cache/anax");
         $this->di = $di;
 
-        $this->controller = new ValidateIPAddressController();
+        $this->controller = new ValidateIPController();
         $this->controller->setDI($this->di);
     }
 
@@ -39,16 +40,34 @@ class ValidateIPAddressControllerTest extends TestCase
     {
         $result = $this->controller->indexActionGet();
         $body = $result->getBody();
-        $main = file_get_contents(__DIR__ . "/../../view/ip/via-php/validate.php");
-        $this->assertStringContainsString($main, $body);
+
+        ob_start();
+        $file = include __DIR__ . "/../../view/ip/via-php/validate.php";
+        $this->assertStringContainsString($file, $body);
+        ob_end_clean();
     }
 
 
     /**
-     * Test 'result' route with POST method.
+     * Test 'result' route with POST method when using user input.
      */
 
-    public function testresultActionPost()
+    public function testresultActionPostUserInput()
+    {
+        $request = $this->di->get("request");
+        $request->setPost("ip-address", "200.200.200.200");
+        $result = $this->controller->resultActionPost();
+
+        $this->assertInstanceOf("Anax\Response\Response", $result);
+        $this->assertInstanceOf("Anax\Response\ResponseUtility", $result);
+    }
+
+
+    /**
+     * Test 'result' route with POST method when using default input.
+     */
+
+    public function testresultActionPostDefaultInput()
     {
         $result = $this->controller->resultActionPost();
         $this->assertInstanceOf("Anax\Response\Response", $result);
@@ -76,10 +95,10 @@ class ValidateIPAddressControllerTest extends TestCase
             $result = $this->controller->resultActionGet();
             $body = $result->getBody();
 
-            ob_start();
-            $file = include __DIR__ . "/../../view/ip/via-php/result.php";
-            $this->assertStringContainsString($file, $body);
-            ob_end_clean();
+            $model = new ValidateIPStylishPresentationModel();
+            $result = $model->getStylishPresentation($ip[$i]);
+
+            $this->assertStringContainsString($result, $body);
         }
     }
 }
