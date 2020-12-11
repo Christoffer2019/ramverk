@@ -6,9 +6,9 @@
 return [
     "routes" => [
         [
-            "info" => "Validera IP-adress",
+            "info" => "Validera IP-adress rest api",
             "mount" => "validera-ip-adress/rest-api",
-            "handler" => "\Anax\Controller\ValidateIPAddressRESTAPIController",
+            "handler" => "\chly19\Controller\ValidateIPAPIController",
         ],
     ]
 ];

@@ -8,7 +8,8 @@ return [
         [
             "info" => "Validera IP-adress",
             "mount" => "validera-ip-adress/php",
-            "handler" => "\Anax\Controller\ValidateIPAddressController",
+            "handler" => "\chly19\Controller\ValidateIPController",
+            // namespace\path-to-the-class
         ],
     ]
 ];
