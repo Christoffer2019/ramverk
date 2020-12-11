@@ -45,3 +45,28 @@ Deleted
 * some files
 
 * Wrote article for course part 1.
+
+V2.0.0 (2020-12-11)
+-------------------
+
+Added
+* information for course part 2 about which API I am using, where the API key is stored and which package I am using for handling environment variables.
+* package vlucas/phpdotenv v5.2 for handling environment variables.
+* my own namespace for the website.
+* example file for storing environment variables. Just change the value in the file.
+* test classes for models, controllers and trait
+* classes for models and trait
+* .gitignore
+
+Updated
+* router for handling API Validator page.
+* style for minimalistic theme.
+* views for validating IP
+* revision history
+
+Deleted
+* some files
+
+Miscellaneous
+* Renamed file for IP API Controller class
+* Wrote article for course part 2.
