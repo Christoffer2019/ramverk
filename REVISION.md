@@ -70,3 +70,22 @@ Deleted
 Miscellaneous
 * Renamed file for IP API Controller class
 * Wrote article for course part 2.
+
+V2.1.0 (2020-12-13)
+-------------------
+
+Added
+* view/ip/via-php/result.php for displaying information on IP.
+* js/map.js, js/wikipedia.js and js/flag.js for displaying IP position on a map, a link to the country's Wikipedia page and the country's flag when the API result for an IP is displayed.
+* id for p tag about flag credits.
+* Images
+    * country flags in view/ip/via-php/result.php
+    * robot in content/validera-ip-adress.md
+    * layers, location, marker icon and marker shadow for leaflet map.
+
+Updated
+* credits for images in footer.
+* minimalistic style
+* controller and models for validating IP.
+
+* Improved test methods for models and controller classes in order to get 100% code coverage.
