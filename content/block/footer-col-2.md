@@ -11,3 +11,5 @@ Bakgrund: *[Pexels](https://www.pexels.com/photo/board-bright-design-fabric-2359
 Footer: *[Life Of Pix från Pexels](https://www.pexels.com/photo/texture-wall-floor-stone-8892/)*
 
 Flaggor: *[WhoIsHostingThis.com](https://www.whoishostingthis.com)*
+
+Robot: *[Lenin Estrada](https://www.pexels.com/photo/wall-e-toy-on-beige-pad-2103864/)* från *[Pexels](https://www.pexels.com)*
