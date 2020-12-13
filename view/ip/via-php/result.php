@@ -3,7 +3,7 @@
 
 <!-- Display country flag for IP position -->
 <img src="" alt="Flagga" id="flag">
-<p>Flagga från <a href="https://www.whoishostingthis.com">WhoIsHostingThis.com</a></p>
+<p id="flag-credits">Flagga från <a href="https://www.whoishostingthis.com">WhoIsHostingThis.com</a></p>
 
 <!-- Use leaflet to display map -->
 <div id="leaflet-map"></div>
