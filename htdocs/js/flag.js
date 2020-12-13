@@ -3,6 +3,7 @@
  */
 
 var flagElem = document.getElementById("flag");
+var FlagCreditsElem = document.getElementById("flag-credits");
 var countryCodeElem = document.getElementById("country_code");
 
 // Check if the country code element exists and if true, get the value.
@@ -15,7 +16,8 @@ if (countryCode) {
 
     // Add the image source to the flag element.
     flagElem.src = pathStart + countryCode + pathEnd;
-} else if (flagElem) {
+} else if (flagElem && FlagCreditsElem) {
     // Remove the flag element.
     flagElem.remove();
+    FlagCreditsElem.remove();
 }
