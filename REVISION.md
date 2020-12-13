@@ -87,5 +87,6 @@ Updated
 * credits for images in footer.
 * minimalistic style
 * controller and models for validating IP.
+* revision history
 
 * Improved test methods for models and controller classes in order to get 100% code coverage.
