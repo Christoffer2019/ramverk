@@ -37,7 +37,7 @@ class ValidateIPStylishPresentationModel extends ValidateIPModel {
                 $pres = $this->getArrayAsString($val, $pres);
             } else {
                 $val = is_bool($val) ? $this->getBoolAsString($val) : $val;
-                $pres .= "<p>" . ucfirst(str_replace("_", " ", $key)) .
+                $pres .= "<p id='" . $key . "'>" . ucfirst(str_replace("_", " ", $key)) .
                     ": " . str_replace("_", " ", $val) . "</p>";
             }
         }

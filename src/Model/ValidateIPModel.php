@@ -6,7 +6,8 @@ use chly19\Traits\ApiKeyTrait;
  * Model for validating IP.
  */
 
-class ValidateIPModel extends RequestModel {
+class ValidateIPModel extends RequestModel
+{
     use ApiKeyTrait;
 
     /**
@@ -47,6 +48,7 @@ class ValidateIPModel extends RequestModel {
             "latitude" => $api_result["latitude"],
             "longitude" => $api_result["longitude"],
             "city" => $api_result["city"],
+            "country_code" => $api_result["country_code"],
             "country_name" => $api_result["country_name"],
             "continent_name" => $api_result["continent_name"]
         ];

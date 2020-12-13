@@ -62,6 +62,9 @@ class ValidateIPController implements ContainerInjectableInterface
         $page->add("anax/v2/article/default", [
             "content" => "<h1>Resultat</h1>" . $result
         ]);
+        // Display map, flag and link to the country's Wikipedia page based
+        // on IP position.
+        $page->add("ip/via-php/result");
 
         return $page->render(["title" => "Resultat"]);
     }
