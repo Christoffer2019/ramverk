@@ -138,8 +138,8 @@ class ValidateIPAPIControllerTest extends TestCase
 
     public function testGetStringBetweenTwoStringsFail() {
         $str = "ThisIsATest";
-        $start = "Is";
-        $end = "A";
+        $start = "Test";
+        $end = " ";
         $res = $this->controller->getStringBetweenTwoStrings($str, $start, $end);
         $this->assertEquals($res, "");
     }
