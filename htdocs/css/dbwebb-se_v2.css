@@ -6361,7 +6361,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   width: 100%;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
   color: #fff;
-  background: url(../img/kmom06/texture-mobile-menu.jpg) #2b2b2b;
+  background: #2b2b2b;
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom center;
@@ -6413,7 +6413,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   height: 500px;
   overflow-y: auto;
   padding-top: 3.5rem;
-  background: url(../img/kmom06/texture-mobile-menu.jpg) #2b2b2b;
+  background: #2b2b2b;
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom center;
