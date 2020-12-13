@@ -24,6 +24,9 @@ return [
             "javascripts" => [
                 "js/responsive-menu.js",
                 "js/main.js",
+                "js/map.js",
+                "js/flag.js",
+                "js/wikipedia.js",
             ],
         ],
     ],
