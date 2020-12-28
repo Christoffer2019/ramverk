@@ -74,6 +74,8 @@ Miscellaneous
 V2.1.0 (2020-12-13)
 -------------------
 
+### Important! This version has a bug. Please use a newer version.
+
 Added
 * view/ip/via-php/result.php for displaying information on IP.
 * js/map.js, js/wikipedia.js and js/flag.js for displaying IP position on a map, a link to the country's Wikipedia page and the country's flag when the API result for an IP is displayed.
@@ -90,3 +92,15 @@ Updated
 * revision history
 
 * Improved test methods for models and controller classes in order to get 100% code coverage.
+
+v2.1.1 (2020-12-13)
+-------------------
+
+Removed a bug which appeared when displaying map on API result page. Please use this version instead of v2.1.0.
+
+v2.1.2 (2020-12-28)
+-------------------
+
+* Updated revision history
+* I removed some code by mistake in htdocs/js/map.js. Then I made the exact same changes in this file as in v2.1.1.
+* Converted the API result to JSON with the method $response->setJsonBody() in src/Controller/ValidateIPAPIController.php and test/Controller/ValidateIPAPIControllerTest.php.
