@@ -91,7 +91,9 @@ class ValidateIPAPIController implements ContainerInjectableInterface
         $validateIPModel->setApiKey($apiKey);
         $result = $validateIPModel->getInfo($ip);
 
-        return json_encode($result, true);
+        $response = $this->di->get("response");
+
+        return $response->setJsonBody($result);
     }
 
 
