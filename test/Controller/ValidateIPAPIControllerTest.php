@@ -114,7 +114,9 @@ class ValidateIPAPIControllerTest extends TestCase
             $ValidResult = $model->getInfo(self::$ipArray[$i]);
             $result = $this->controller->apiActionGet();
 
-            $this->assertEquals($result, json_encode($ValidResult, true));
+            $response = $this->di->get("response");
+
+            $this->assertEquals($result, $response->setJsonBody($ValidResult));
         }
     }
 
